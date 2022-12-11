@@ -1,5 +1,5 @@
 ---
-title: "1.1 Practicing the Basics"
+title: "1.1 Using data to answer statistical questions"
 author: "Luis Talavera"
 date: "`r Sys.Date()`"
 output:

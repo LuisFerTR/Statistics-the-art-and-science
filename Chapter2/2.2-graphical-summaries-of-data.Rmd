@@ -1,0 +1,47 @@
+---
+title: "2.2 Graphical summaries of data"
+author: "Luis Talavera"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+## Exercises
+**2.10 Generating Electricity** In 2012 in the United States,
+most electricity was generated from coal (37%), natural
+gas (30%), or nuclear power plants (19%). Hydropower
+accounted for 7% of the total electricity produced; other
+renewable sources such as wind or solar power accounted
+for 5%. Other nonrenewable sources (such as petroleum)
+made up the remaining 2%. (Source: http://www.eia.gov/
+electricity/annual/html/epa_01_01.html)  
+  a. Display this information in a bar graph.  
+  b. Which is easier to sketch relatively accurately, a pie
+chart or a bar chart?  
+  c. What is the advantage of using a graph to summarize
+the results instead of merely stating the percentages for
+each source?  
+  d. What is the modal category?  
+  
+#### Ans.
+```{r}
+energy_sources <- tibble(energy_source = c("coal", "natural gas", "hydropower",
+                                           "other_renewable", "nonrenewable"),
+                         elec_generated_percent = c(37,30,19,7,5))
+
+g <- ggplot(energy_sources, aes(x = reorder(energy_source, -elec_generated_percent), y = elec_generated_percent))
+g <- g + geom_bar(aes(fill = energy_source), stat="identity") +
+     labs(title="Electricity generated sources",
+        x ="Energy source", y = "Electricity percentage") +
+     theme(legend.position = "none")
+g
+```
+
