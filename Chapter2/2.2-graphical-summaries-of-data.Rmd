@@ -483,11 +483,33 @@ address the question about the success of the vaccination for whooping cough? Wh
 
 #### Ans.
   a.
-  b.
-  c.
+```{r, out.width="75%", fig.align = 'center'}
+incidence_rates <- tibble(year = seq(1925, 1970, 5), 
+                          rates = c(131.2,135.6,141.9,139.6,101.0,80.1,38.2,8.3,3.5,2.1))
+
+ggplot(data = incidence_rates, aes(x = year, y = rates)) +
+  geom_line(color = "#00AFBB", size = 1) +
+  labs(x="Year", y="Rate per 100,000")
+```
+  Yes, the rates has been decreasing over the years
+  
+  b. No, US is not close to eradicate the disease due to people stop from getting the vaccine.
+  c. By the plots, we could se the campaign was effective and after the campaign stops the rates increased.
   
 **2.28 Warming in Newnan, Georgia?** Access the Newnan, GA
 Temps file on the book’s website, which reports the average
 annual temperatures during the 20th century for Newnan,
 Georgia. Construct a time plot to investigate a possible
 trend over time. Is there evidence of climate change?
+
+#### Ans.
+
+```{r, out.width="60%", fig.align = 'center', message=FALSE}
+newnan_ga_temps <- read_csv("../datasets/newnan_ga_temps.csv")
+
+ggplot(data = newnan_ga_temps, aes(x = Year, y = Temp)) +
+  geom_line(color = "#00AFBB", size = 1) +
+  labs(x="Year", y="Temperature")
+```
+
+Well, the temperature in Newman Georgia has been decreasing over the years, but a temperature records from an specific place can't be used to determine a global climate change.

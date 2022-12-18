@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.23)  11 DEC 2022 17:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.23)  18 DEC 2022 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -511,7 +511,18 @@ File: ./whooping_1980.jpg Graphic file (type jpg)
 <use ./whooping_1980.jpg>
 Package pdftex.def Info: ./whooping_1980.jpg  used on input line 627.
 (pdftex.def)             Requested size: 267.25594pt x 190.46687pt.
-[11 <./whooping.jpg> <./whooping_1980.jpg>] [12] (./2.2-graphical-summaries-of-data.aux)
+[11 <./whooping.jpg> <./whooping_1980.jpg>]
+<2.2-graphical-summaries-of-data_files/figure-latex/unnamed-chunk-9-1.pdf, id=202, 469.755pt x 325.215pt>
+File: 2.2-graphical-summaries-of-data_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file (type pdf)
+<use 2.2-graphical-summaries-of-data_files/figure-latex/unnamed-chunk-9-1.pdf>
+Package pdftex.def Info: 2.2-graphical-summaries-of-data_files/figure-latex/unnamed-chunk-9-1.pdf  used on input line 657.
+(pdftex.def)             Requested size: 352.31538pt x 243.91064pt.
+<2.2-graphical-summaries-of-data_files/figure-latex/unnamed-chunk-10-1.pdf, id=203, 469.755pt x 325.215pt>
+File: 2.2-graphical-summaries-of-data_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type pdf)
+<use 2.2-graphical-summaries-of-data_files/figure-latex/unnamed-chunk-10-1.pdf>
+Package pdftex.def Info: 2.2-graphical-summaries-of-data_files/figure-latex/unnamed-chunk-10-1.pdf  used on input line 682.
+(pdftex.def)             Requested size: 281.85518pt x 195.1305pt.
+[12 <./2.2-graphical-summaries-of-data_files/figure-latex/unnamed-chunk-9-1.pdf> <./2.2-graphical-summaries-of-data_files/figure-latex/unnamed-chunk-10-1.pdf>] (./2.2-graphical-summaries-of-data.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -519,18 +530,18 @@ Package rerunfilecheck Info: File `2.2-graphical-summaries-of-data.out' has not 
 (rerunfilecheck)             Checksum: 8FE55ED8AD9B8F2A4BAACCD1CDFB2C86;89.
  ) 
 Here is how much of TeX's memory you used:
- 10709 strings out of 480313
- 170446 string characters out of 5895863
- 459763 words of memory out of 5000000
- 28287 multiletter control sequences out of 15000+600000
+ 10730 strings out of 480313
+ 171794 string characters out of 5895863
+ 459791 words of memory out of 5000000
+ 28304 multiletter control sequences out of 15000+600000
  443037 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,8n,63p,309b,562s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/T460/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/Users/T460/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/T460/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/T460/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/T460/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/T460/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/T460/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on 2.2-graphical-summaries-of-data.pdf (12 pages, 383846 bytes).
+Output written on 2.2-graphical-summaries-of-data.pdf (12 pages, 394431 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 215 compressed objects within 3 object streams
- 115 named destinations out of 1000 (max. 500000)
- 84 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 278 PDF objects out of 1000 (max. 8388607)
+ 225 compressed objects within 3 object streams
+ 117 named destinations out of 1000 (max. 500000)
+ 94 words of extra memory for PDF output out of 10000 (max. 10000000)
 
