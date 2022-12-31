@@ -4,6 +4,9 @@ author: "Luis Talavera"
 date: "`r Sys.Date()`"
 output:
   pdf_document: default
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r setup, include=FALSE}
@@ -16,46 +19,48 @@ library(ggpubr)
 ```
 
 ## Exercises
-**2.29 Median versus mean** For each of the following variables,
-would you use the median or mean for describing the
-center of the distribution? Why? (Think about the likely
-shape of the distribution.)  
-  a. Salary of employees of a university  
-  b. Time spent on a difficult exam  
-  c. Scores on a standardized test  
-  
-#### Ans.
-  a. Median (right-skewed)
-  b. Median (left-skewed)
-  c. Mean (symmetric)
-  
-**2.30 More median versus mean** For each of the following variables, would you use the median or mean for describing the
-center of the distribution? Why? (Think about the likely
-shape of the distribution.)  
-  a. Amount of liquid in bottles of capacity one liter 
-  b. The salary of all the employees in a company  
-  c. Number of requests to reset passwords for individual
-email accounts.  
+
+**2.29 Median versus mean** For each of the following variables, would
+you use the median or mean for describing the center of the
+distribution? Why? (Think about the likely shape of the distribution.)\
+a. Salary of employees of a university\
+b. Time spent on a difficult exam\
+c. Scores on a standardized test
 
 #### Ans.
-  a. Mean (symmetric)
-  b. Median (right-skewed)
-  c. Median (right-skewed)
 
-**2.31 More on CO2 emissions** The Energy Information Agency
-reported the CO2 emissions (measured in gigatons, Gt)
-from fossil fuel combustion for the top 10 emitting countries in 2011. These are China (8 Gt), the United States
-(5.3 Gt), India (1.8 Gt), Russia (1.7 Gt), Japan (1.2 Gt),
-Germany (0.8 Gt), Korea (0.6 Gt), Canada(0.5 Gt), Iran
-(0.4 Gt), and Saudi Arabia (0.4 Gt).  
-  a. Find the mean and median CO2 emission.  
-  b. The totals reported here do not take into account a
-nation’s population size. Explain why it may be more
-sensible to analyze per capita values, as was done in
-Example 11.
+a.  Median (right-skewed)
+b.  Median (left-skewed)
+c.  Mean (symmetric)
 
-#### Ans.  
-  a.
+**2.30 More median versus mean** For each of the following variables,
+would you use the median or mean for describing the center of the
+distribution? Why? (Think about the likely shape of the distribution.)\
+a. Amount of liquid in bottles of capacity one liter b. The salary of
+all the employees in a company\
+c. Number of requests to reset passwords for individual email accounts.
+
+#### Ans.
+
+a.  Mean (symmetric)
+b.  Median (right-skewed)
+c.  Median (right-skewed)
+
+**2.31 More on CO2 emissions** The Energy Information Agency reported
+the CO2 emissions (measured in gigatons, Gt) from fossil fuel combustion
+for the top 10 emitting countries in 2011. These are China (8 Gt), the
+United States (5.3 Gt), India (1.8 Gt), Russia (1.7 Gt), Japan (1.2 Gt),
+Germany (0.8 Gt), Korea (0.6 Gt), Canada(0.5 Gt), Iran (0.4 Gt), and
+Saudi Arabia (0.4 Gt).\
+a. Find the mean and median CO2 emission.\
+b. The totals reported here do not take into account a nation's
+population size. Explain why it may be more sensible to analyze per
+capita values, as was done in Example 11.
+
+#### Ans.
+
+a.  
+
 ```{r, comment=""}
 co2_emissions <- c(8,5.3,1.8,1.7,1.2,0.7,0.6,0.5,0.4,0.4)
 m <- mean(co2_emissions)
@@ -64,20 +69,22 @@ md <- median(co2_emissions)
 message(paste("Mean: ", m))
 message(paste("Median: ", md))
 ```
-  b. Nations with a larger population will have larger co2 emissions, analyzing per capita values will give us another point of view more accurate.
-  
-**2.32 Resistance to an outlier** Consider the following three
-sets of observations:
-Set 1: 8, 9, 10, 11, 12
-Set 2: 8, 9, 10, 11, 100
-Set 3: 8, 9, 10, 11, 1000  
-  a. Find the median for each data set.
-  b. Find the mean for each data set.
-  c. What do these data sets illustrate about the resistance
-of the median and mean?  
+
+b.  Nations with a larger population will have larger co2 emissions,
+    analyzing per capita values will give us another point of view more
+    accurate.
+
+**2.32 Resistance to an outlier** Consider the following three sets of
+observations: Set 1: 8, 9, 10, 11, 12 Set 2: 8, 9, 10, 11, 100 Set 3: 8,
+9, 10, 11, 1000\
+a. Find the median for each data set. b. Find the mean for each data
+set. c. What do these data sets illustrate about the resistance of the
+median and mean?
 
 #### Ans.
-  a.
+
+a.  
+
 ```{r, comment=""}
 s1 <- c(8, 9, 10, 11, 12)
 s2 <- c(8, 9, 10, 11, 100)
@@ -87,36 +94,51 @@ message(paste("Median set 1: ", median(s1)))
 message(paste("Median set 2: ", median(s2)))
 message(paste("Median set 3: ", median(s3)))
 ```
-  
-  b.
+
+b.  
+
 ```{r, comment=""}
 message(paste("Median set 1: ", mean(s1)))
 message(paste("Median set 2: ", mean(s2)))
 message(paste("Median set 3: ", mean(s3)))
 ```
-  c. The median is resistance to outliers but the mean not.
 
-**2.33 Weekly earnings and gender** In New Zealand, the mean
-and median weekly earnings for males in 2009 was $993
-and $870, respectively and for females, the mean and
-median weekly earnings were $683 and $625, respectively
-(www.nzdotstat.stats.govt.nz). Does this suggest that
-the distribution of weekly earnings for males is
-symmetric, skewed to the right, or skewed to the left?
-What about the distribution of weekly earnings for
-females? Explain.  
+c.  The median is resistance to outliers but the mean not.
+
+**2.33 Weekly earnings and gender** In New Zealand, the mean and median
+weekly earnings for males in 2009 was \$993 and \$870, respectively and
+for females, the mean and median weekly earnings were \$683 and \$625,
+respectively (www.nzdotstat.stats.govt.nz). Does this suggest that the
+distribution of weekly earnings for males is symmetric, skewed to the
+right, or skewed to the left? What about the distribution of weekly
+earnings for females? Explain.
 
 #### Ans.
-If the mean and median are equal the distribution is symmetric, if the mean is below the median the distribution is left-skewed and if the mean is above the median the distribution is right-skewed. Therefore the distribution of weekly earning for males is right-skewed and for females is the same.
 
-**2.34 Labor dispute** The workers and the management of
-a company are having a labor dispute. Explain why the
-workers might use the median income of all the employees to justify a raise but management might use the mean
-income to argue that a raise is not needed.
-  
-#### Ans. 
-A company salaries distribution is right-skewed, indicating that most of the workers earn almost the same and a few ones earn more by an incredible difference. The median is not sensitive to outliers (the salary of management and chiefs) so the workers will use the median justify a raise since the median will reflect their current income and management will use mean to hide this difference between salaries.
+If the mean and median are equal the distribution is symmetric, if the
+mean is below the median the distribution is left-skewed and if the mean
+is above the median the distribution is right-skewed. Therefore the
+distribution of weekly earning for males is right-skewed and for females
+is the same.
 
-### Note  
-The rest of the exercises are almost the same, calculating median and mean, comparing, drawing conclusions, the only differences were that they gave you the information or you had to obtain it, since it is a subject that I understood quickly I will choose to skip those remaining exercises.
-  
+**2.34 Labor dispute** The workers and the management of a company are
+having a labor dispute. Explain why the workers might use the median
+income of all the employees to justify a raise but management might use
+the mean income to argue that a raise is not needed.
+
+#### Ans.
+
+A company salaries distribution is right-skewed, indicating that most of
+the workers earn almost the same and a few ones earn more by an
+incredible difference. The median is not sensitive to outliers (the
+salary of management and chiefs) so the workers will use the median
+justify a raise since the median will reflect their current income and
+management will use mean to hide this difference between salaries.
+
+### Note
+
+The rest of the exercises are almost the same, calculating median and
+mean, comparing, drawing conclusions, the only differences were that
+they gave you the information or you had to obtain it, since it is a
+subject that I understood quickly I will choose to skip those remaining
+exercises.
